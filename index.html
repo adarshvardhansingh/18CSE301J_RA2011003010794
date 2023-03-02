@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tableau Embed Example</title>
+    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  </head>
+  <body>
+    <div id="tableauViz"></div>
+
+    <script>
+      function initViz() {
+        var containerDiv = document.getElementById("tableauViz");
+        var url = "https://public.tableau.com/views/INfoVis_Project2/PopulationOfIndia?:language=en-US&:display_count=n&:origin=viz_share_link";
+        var options = {
+          width: "100%",
+          height: "800px",
+          hideTabs: true,
+          hideToolbar: true,
+        };
+        var viz = new tableau.Viz(containerDiv, url, options);
+      }
+      (function () {
+        var vizInit = setInterval(function () {
+          if (typeof tableau !== "undefined") {
+            clearInterval(vizInit);
+            initViz();
+          }
+        }, 10);
+      })();
+    </script>
+  </body>
+</html>
