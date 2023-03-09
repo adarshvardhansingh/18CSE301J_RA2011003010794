@@ -1,33 +1,88 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tableau Embed Example</title>
     <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="tableauViz"></div>
-
-    <script>
-      function initViz() {
-        var containerDiv = document.getElementById("tableauViz");
-        var url = "https://public.tableau.com/views/INfoVis_Project2/PopulationOfIndia?:language=en-US&:display_count=n&:origin=viz_share_link";
-        var options = {
-          width: "100%",
-          height: "800px",
-          hideTabs: true,
-          hideToolbar: true,
-        };
-        var viz = new tableau.Viz(containerDiv, url, options);
-      }
-      (function () {
-        var vizInit = setInterval(function () {
-          if (typeof tableau !== "undefined") {
-            clearInterval(vizInit);
-            initViz();
-          }
-        }, 10);
-      })();
-    </script>
-    <li><script src="https://gist.github.com/adarshvardhansingh/d0163df3d0f097cd0410b5d2cd388221.js"></script><\li>
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <img src=""C:\Users\vardh\OneDrive\Desktop\code_letters_screen_135985_1920x1080.jpg"" alt="">
+        <p>Hi, I'm Adarsh Vardhan Singh,I am a third year student of Computer Science and Engineering and enrolled in SRM Institute of Science and Technolog .</p>
+      </section>
+      <section id="projects">
+        <h2>My Projects</h2>
+        <ul>
+          <li>
+            <h3>Project 1</h3>
+            <head>
+              <title>Tableau Embed Example</title>
+              <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+            </head>
+            <body>
+              <div id="tableauViz"></div>
+          
+              <script>
+                function initViz() {
+                  var containerDiv = document.getElementById("tableauViz");
+                  var url = "https://public.tableau.com/views/INfoVis_Project2/PopulationOfIndia?:language=en-US&:display_count=n&:origin=viz_share_link";
+                  var options = {
+                    width: "100%",
+                    height: "800px",
+                    hideTabs: true,
+                    hideToolbar: true,
+                  };
+                  var viz = new tableau.Viz(containerDiv, url, options);
+                }
+                (function () {
+                  var vizInit = setInterval(function () {
+                    if (typeof tableau !== "undefined") {
+                      clearInterval(vizInit);
+                      initViz();
+                    }
+                  }, 10);
+                })();
+              </script>
+              <li><script src="https://gist.github.com/adarshvardhansingh/d0163df3d0f097cd0410b5d2cd388221.js"></script><\li>
+            </body>
+      
+          </li>
+          <li>
+            <h3>Project 2</h3>
+            <li><script src="https://gist.github.com/adarshvardhansingh/d0163df3d0f097cd0410b5d2cd388221.js"></script><\li>
+            <p></p>
+          </li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright © 2023 AdarshVardhan</p>
+    </footer>
   </body>
 </html>
